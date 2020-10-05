@@ -38,17 +38,7 @@ Olimpia Milano - Cantù | 55-60 -->
  ];
  //var_dump(count($matches));
  //var_dump($matches[0]);
-
- for ($i=0; $i < count($matches) ; $i++) {
-   //var_dump($matches[$i]["Casa"]);
-   $home = $matches[$i]["Casa"];
-   $guest = $matches[$i]["Ospiti"];
-   $home_score = $matches[$i]["Punti casa"];
-   $guest_score = $matches[$i]["Punti ospiti"];
-
-   echo $home." - ".$guest." | ".$home_score."-".$guest_score."<br>";
- }
- ?>
+?>
 
  <!DOCTYPE html>
  <html lang="en" dir="ltr">
@@ -57,6 +47,17 @@ Olimpia Milano - Cantù | 55-60 -->
      <title>PHP Snack 1</title>
    </head>
    <body>
+     <?php
+     for ($i=0; $i < count($matches) ; $i++) {
+       //var_dump($matches[$i]["Casa"]);
+       $home = $matches[$i]["Casa"];
+       $guest = $matches[$i]["Ospiti"];
+       $home_score = $matches[$i]["Punti casa"];
+       $guest_score = $matches[$i]["Punti ospiti"];
+
+       echo $home." - ".$guest." | ".$home_score."-".$guest_score."<br>";
+     }
+      ?>
 
    </body>
  </html>
